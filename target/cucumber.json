@@ -1,0 +1,1122 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2051030000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I logged CurrentCloud api by using \"login_id\" and \"api_key\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"login_id\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"api_key\"",
+                  "offset": 50
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.i_logged_CurrentCloud_api_by_using_and(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 309991000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I get the Auth_Token from api",
+            "match": {
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.i_get_the_Auth_Token_from_api()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1099000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 22
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.status_code_should_be(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-12-16T12:05:14.722Z",
+        "before": [
+          {
+            "result": {
+              "duration": 402307000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.CurrencyCloud.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 22,
+        "name": "selling GBP and buying USD using the sell side minimum amount",
+        "description": "",
+        "id": "payment-api;selling-gbp-and-buying-usd-using-the-sell-side-\u003ctype\u003e;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 22000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.CurrencyCloud.step_definitions.Hooks.endAPISession()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 817000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I set REST API url with \"payment_endpoint\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"payment_endpoint\"",
+                  "offset": 24
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.i_set_REST_API_url_with(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 512037000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I sell and buy money by using \"USD\"  ,\"GBP\" ,\"sell\" ,\"1\" with \"X-Auth-Token\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"USD\"",
+                  "offset": 30
+                },
+                {
+                  "val": "\"GBP\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"sell\"",
+                  "offset": 45
+                },
+                {
+                  "val": "\"1\"",
+                  "offset": 53
+                },
+                {
+                  "val": "\"X-Auth-Token\"",
+                  "offset": 62
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.iSellAndBuyMoneyByUsingWith(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 524000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 22
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.status_code_should_be(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 33728000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "verify that \"client_buy_amount\" is correct",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"client_buy_amount\"",
+                  "offset": 12
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.verify_that_is_correct(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 242064000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "end the payment API session",
+            "match": {
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.endThePaymentAPISession()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 221000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 22
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.status_code_should_be(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@currencyCloud"
+          },
+          {
+            "name": "@positive"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1196660000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I logged CurrentCloud api by using \"login_id\" and \"api_key\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"login_id\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"api_key\"",
+                  "offset": 50
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.i_logged_CurrentCloud_api_by_using_and(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 8092000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I get the Auth_Token from api",
+            "match": {
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.i_get_the_Auth_Token_from_api()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 362000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 22
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.status_code_should_be(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-12-16T12:05:18.325Z",
+        "before": [
+          {
+            "result": {
+              "duration": 58000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.CurrencyCloud.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 23,
+        "name": "selling GBP and buying USD using the sell side valid amount",
+        "description": "",
+        "id": "payment-api;selling-gbp-and-buying-usd-using-the-sell-side-\u003ctype\u003e;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 22000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.CurrencyCloud.step_definitions.Hooks.endAPISession()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 790000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I set REST API url with \"payment_endpoint\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"payment_endpoint\"",
+                  "offset": 24
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.i_set_REST_API_url_with(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 453921000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I sell and buy money by using \"USD\"  ,\"GBP\" ,\"sell\" ,\"8000\" with \"X-Auth-Token\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"USD\"",
+                  "offset": 30
+                },
+                {
+                  "val": "\"GBP\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"sell\"",
+                  "offset": 45
+                },
+                {
+                  "val": "\"8000\"",
+                  "offset": 53
+                },
+                {
+                  "val": "\"X-Auth-Token\"",
+                  "offset": 65
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.iSellAndBuyMoneyByUsingWith(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 334000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 22
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.status_code_should_be(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 22235000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "verify that \"client_buy_amount\" is correct",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"client_buy_amount\"",
+                  "offset": 12
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.verify_that_is_correct(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 217776000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "end the payment API session",
+            "match": {
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.endThePaymentAPISession()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 373000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 22
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.status_code_should_be(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@currencyCloud"
+          },
+          {
+            "name": "@positive"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1190906000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I logged CurrentCloud api by using \"login_id\" and \"api_key\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"login_id\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"api_key\"",
+                  "offset": 50
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.i_logged_CurrentCloud_api_by_using_and(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 8127000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I get the Auth_Token from api",
+            "match": {
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.i_get_the_Auth_Token_from_api()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 455000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 22
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.status_code_should_be(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-12-16T12:05:20.230Z",
+        "before": [
+          {
+            "result": {
+              "duration": 33000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.CurrencyCloud.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "selling GBP and buying USD using the sell side valid amount",
+        "description": "",
+        "id": "payment-api;selling-gbp-and-buying-usd-using-the-sell-side-\u003ctype\u003e;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 19000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.CurrencyCloud.step_definitions.Hooks.endAPISession()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1169000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I set REST API url with \"payment_endpoint\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"payment_endpoint\"",
+                  "offset": 24
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.i_set_REST_API_url_with(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1561963000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I sell and buy money by using \"USD\"  ,\"GBP\" ,\"buy\" ,\"5000\" with \"X-Auth-Token\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"USD\"",
+                  "offset": 30
+                },
+                {
+                  "val": "\"GBP\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"buy\"",
+                  "offset": 45
+                },
+                {
+                  "val": "\"5000\"",
+                  "offset": 52
+                },
+                {
+                  "val": "\"X-Auth-Token\"",
+                  "offset": 64
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.iSellAndBuyMoneyByUsingWith(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 484000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 22
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.status_code_should_be(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 22740000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "verify that \"client_buy_amount\" is correct",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"client_buy_amount\"",
+                  "offset": 12
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.verify_that_is_correct(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 177648000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "end the payment API session",
+            "match": {
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.endThePaymentAPISession()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 477000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 22
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.status_code_should_be(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@currencyCloud"
+          },
+          {
+            "name": "@positive"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1225439000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I logged CurrentCloud api by using \"login_id\" and \"api_key\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"login_id\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"api_key\"",
+                  "offset": 50
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.i_logged_CurrentCloud_api_by_using_and(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6599000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I get the Auth_Token from api",
+            "match": {
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.i_get_the_Auth_Token_from_api()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 343000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 22
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.status_code_should_be(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-12-16T12:05:23.200Z",
+        "before": [
+          {
+            "result": {
+              "duration": 36000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.CurrencyCloud.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "selling GBP and buying USD using the sell side case sensitive check for buy/sell currency",
+        "description": "",
+        "id": "payment-api;selling-gbp-and-buying-usd-using-the-sell-side-\u003ctype\u003e;;5",
+        "after": [
+          {
+            "result": {
+              "duration": 20000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.CurrencyCloud.step_definitions.Hooks.endAPISession()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 895000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I set REST API url with \"payment_endpoint\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"payment_endpoint\"",
+                  "offset": 24
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.i_set_REST_API_url_with(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 519880000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I sell and buy money by using \"UsD\"  ,\"gbP\" ,\"sell\" ,\"1000\" with \"X-Auth-Token\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"UsD\"",
+                  "offset": 30
+                },
+                {
+                  "val": "\"gbP\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"sell\"",
+                  "offset": 45
+                },
+                {
+                  "val": "\"1000\"",
+                  "offset": 53
+                },
+                {
+                  "val": "\"X-Auth-Token\"",
+                  "offset": 65
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.iSellAndBuyMoneyByUsingWith(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 345000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 22
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.status_code_should_be(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 23696000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "verify that \"client_buy_amount\" is correct",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"client_buy_amount\"",
+                  "offset": 12
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.verify_that_is_correct(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 145619000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "end the payment API session",
+            "match": {
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.endThePaymentAPISession()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 322000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 22
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.status_code_should_be(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@currencyCloud"
+          },
+          {
+            "name": "@positive"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1245884000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I logged CurrentCloud api by using \"login_id\" and \"api_key\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"login_id\"",
+                  "offset": 35
+                },
+                {
+                  "val": "\"api_key\"",
+                  "offset": 50
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.i_logged_CurrentCloud_api_by_using_and(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 7606000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I get the Auth_Token from api",
+            "match": {
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.i_get_the_Auth_Token_from_api()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 410000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 22
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.status_code_should_be(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-12-16T12:05:25.128Z",
+        "before": [
+          {
+            "result": {
+              "duration": 32000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.CurrencyCloud.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "selling GBP and buying USD using the sell side maximum amount",
+        "description": "",
+        "id": "payment-api;selling-gbp-and-buying-usd-using-the-sell-side-\u003ctype\u003e;;6",
+        "after": [
+          {
+            "result": {
+              "duration": 11000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.CurrencyCloud.step_definitions.Hooks.endAPISession()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1068000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I set REST API url with \"payment_endpoint\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"payment_endpoint\"",
+                  "offset": 24
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.i_set_REST_API_url_with(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 397263000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I sell and buy money by using \"USD\"  ,\"GBP\" ,\"sell\" ,\"10000000.00\" with \"X-Auth-Token\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"USD\"",
+                  "offset": 30
+                },
+                {
+                  "val": "\"GBP\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"sell\"",
+                  "offset": 45
+                },
+                {
+                  "val": "\"10000000.00\"",
+                  "offset": 53
+                },
+                {
+                  "val": "\"X-Auth-Token\"",
+                  "offset": 72
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.iSellAndBuyMoneyByUsingWith(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 465000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 22
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.status_code_should_be(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 21517000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "verify that \"client_buy_amount\" is correct",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"client_buy_amount\"",
+                  "offset": 12
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.verify_that_is_correct(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 161241000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "end the payment API session",
+            "match": {
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.endThePaymentAPISession()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 217000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 22
+                }
+              ],
+              "location": "com.CurrencyCloud.step_definitions.PaymentStepDefs.status_code_should_be(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@currencyCloud"
+          },
+          {
+            "name": "@positive"
+          }
+        ]
+      }
+    ],
+    "name": "Payment API",
+    "description": "",
+    "id": "payment-api",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/PaymentApi.feature",
+    "tags": [
+      {
+        "name": "@currencyCloud",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

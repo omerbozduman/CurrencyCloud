@@ -25,9 +25,14 @@ public class PaymentStepDefs {
     @Given("I logged CurrentCloud api by using {string} and {string}")
     public void i_logged_CurrentCloud_api_by_using_and(String login_id, String api_key) {
 
-        Map<String , Object> request = new HashMap<>();
-        request.put("login_id",ConfigurationReader.get(login_id));
-        request.put("api_key",ConfigurationReader.get(api_key));
+        //second way
+//        Map<String , Object> request = new HashMap<>();
+//        request.put("login_id",ConfigurationReader.get(login_id));
+//        request.put("api_key",ConfigurationReader.get(api_key));
+//        response= given().accept(ContentType.JSON)
+//                .formParams(request)
+//                .post(ConfigurationReader.get("auth_endpoint"));
+
 
         response=given().
                 contentType("multipart/form-data")
@@ -67,6 +72,10 @@ public class PaymentStepDefs {
      //   auth_token=Hooks.auth_token;
 
         response=given().accept(ContentType.JSON).header(token,auth_token).
+//                queryParams("buy_currency",buyCurrency).
+//                queryParams("sell_currency",sellCurrency).
+//                queryParams("fixed_side",fixedSide).
+//                queryParams("amount",amount).
                 queryParams(bodyData).
                 when().
                 get(endPoint);
@@ -77,16 +86,36 @@ public class PaymentStepDefs {
 
         DecimalFormat  df = new DecimalFormat("##.##");
 
-        Double sellAmount = Double.valueOf(response.jsonPath().getDouble("client_sell_amount"));
+        Double sellAmount = response.jsonPath().getDouble("client_sell_amount");
         sellAmount =Double.parseDouble(df.format(sellAmount));
         Double rate = response.jsonPath().getDouble("client_rate");
-
         Double buyAmount = response.jsonPath().getDouble(client_buy_amount);
         buyAmount =Double.parseDouble(df.format(buyAmount));
         Double totalAmount = sellAmount*rate;
         totalAmount=Double.parseDouble(df.format(totalAmount));
 
         Assert.assertEquals("verify that client buy amount is correct",totalAmount,buyAmount);
+
+        // second way
+//        Map<String,String> paymentData = response.as(Map.class);
+//        Double clientBuyAmount = Double.parseDouble(df.format(Double.parseDouble(paymentData.get("client_buy_amount"))));
+//        Double clientSellAmount = Double.parseDouble(df.format(Double.parseDouble(paymentData.get("client_sell_amount"))));
+//        Double clientRate = Double.parseDouble(paymentData.get("client_rate"));
+//        Double totalMoney = Double.parseDouble(df.format(clientRate*clientSellAmount));
+//
+//        Assert.assertEquals(totalMoney,clientBuyAmount);
+
+        // third way
+//        BigDecimal data = new BigDecimal(response.jsonPath().getString("client_sell_amount"));
+//        BigDecimal rate1 = new BigDecimal(response.jsonPath().getString("client_rate"));
+//        BigDecimal total = data.multiply(rate1);
+//        System.out.println("total = " + total);
+//        total= total.setScale(2, RoundingMode.HALF_DOWN);
+//        System.out.println("total = " + total);
+//        BigDecimal buy = new BigDecimal(response.jsonPath().getString(client_buy_amount));
+//        System.out.println("buy = " + buy);
+//        Assert.assertEquals("verify that client buy amount is correct",total,buy);
+
 
     }
 
@@ -95,6 +124,7 @@ public class PaymentStepDefs {
         String key = "error_messages." + messageType +"[0].message";
         String actualErrorMessage = response.jsonPath().get(key);
         Assert.assertEquals("verify response error message",errorMessage,actualErrorMessage);
+
     }
 
     @Then("end the payment API session")

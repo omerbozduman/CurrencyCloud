@@ -4,13 +4,6 @@ import com.CurrencyCloud.utilities.ConfigurationReader;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.restassured.RestAssured;
-import io.restassured.response.Response;
-import org.junit.Assert;
-
-import java.util.HashMap;
-import java.util.Map;
-
-import static io.restassured.RestAssured.given;
 
 public class Hooks {
 
